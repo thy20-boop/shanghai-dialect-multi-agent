@@ -1,0 +1,1596 @@
+﻿{
+    "output":  "outputs\\help_57_64_reply_wenet_wu_final.mp3",
+    "target":  "wuu",
+    "selected":  {
+                     "path":  "outputs\\help_57_64_reply_wenet_wu_final.mp3",
+                     "text_lang":  "wu",
+                     "transcript":  "WU在上海常用个求助电话号码要记牢我有报警幺幺零火警幺幺九医疗急救幺二零请记牢汪雨交通事故报警幺二二请记牢而为上海市民服务热线是幺两三四五可以用于咨询投诉猫要求助和反映非紧急问题朋友啊遇到生命危险先拨紧急电话保有非紧急问题请拨幺二三四五服务热线",
+                     "mandarin_translation":  "WU在上海常用个求助电话号码要记牢我有报警幺幺零火警幺幺九医疗急救幺二零请记牢汪雨交通事故报警幺二二请记牢而为上海市民服务热线是幺两三四五可以用于咨询投诉猫要求助和反映非紧急问题朋友啊遇到生命危险先拨紧急电话保有非紧急问题请拨幺二三四五服务热线",
+                     "quality":  {
+                                     "keyword_recall":  1.0,
+                                     "char_accuracy":  0.75,
+                                     "dialect_score":  0.0,
+                                     "suspicion_count":  0,
+                                     "missing_terms":  [
+
+                                                       ],
+                                     "matched_terms":  [
+                                                           "110",
+                                                           "119",
+                                                           "120",
+                                                           "报警",
+                                                           "火警",
+                                                           "急救",
+                                                           "122",
+                                                           "交通事故",
+                                                           "12345",
+                                                           "市民服务热线"
+                                                       ],
+                                     "missing_critical_terms":  [
+
+                                                                ],
+                                     "passes_critical_gate":  true
+                                 }
+                 },
+    "unsafe_candidate":  false,
+    "critical_gate_failed":  false,
+    "unsafe_policy":  "dual",
+    "used_fallback":  false,
+    "fallback_output":  null,
+    "fallback_text_source":  "primary_text",
+    "min_keyword_recall":  0.9,
+    "min_char_accuracy":  0.75,
+    "sentence_count":  7,
+    "reference_experts":  [
+                              "official_male_g0003"
+                          ],
+    "generation_endpoints":  [
+                                 "primary"
+                             ],
+    "prefix_trim_enabled":  false,
+    "sentences":  [
+                      {
+                          "index":  1,
+                          "text":  "在上海，常用的求助电话号码要记牢。",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_01\\candidate_01.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+
+                                                                              ],
+                                                           "matched_terms":  [
+
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+
+                                                                              ],
+                                                           "matched_critical_terms":  [
+
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.2,
+                                                           "char_accuracy":  0.8,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "WU在上海常用个求助电话号码要记牢",
+                                           "mandarin_translation":  "WU在上海常用个求助电话号码要记牢"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  1,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_01\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.2,
+                                                                 "char_accuracy":  0.8,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "WU在上海常用个求助电话号码要记牢",
+                                                 "mandarin_translation":  "WU在上海常用个求助电话号码要记牢"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  2,
+                          "text":  "报警110，火警119，医疗急救120，请记牢。",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_02\\candidate_02.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  2,
+                                           "speed":  0.88,
+                                           "seed":  2026,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "110",
+                                                                                  "119",
+                                                                                  "120",
+                                                                                  "报警",
+                                                                                  "火警",
+                                                                                  "急救"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "110",
+                                                                                 "119",
+                                                                                 "120",
+                                                                                 "报警",
+                                                                                 "火警",
+                                                                                 "急救"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "110",
+                                                                                  "119",
+                                                                                  "120",
+                                                                                  "报警",
+                                                                                  "火警",
+                                                                                  "急救"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "110",
+                                                                                          "119",
+                                                                                          "120",
+                                                                                          "报警",
+                                                                                          "火警",
+                                                                                          "急救"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1,
+                                                           "char_accuracy":  0.9,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢",
+                                           "mandarin_translation":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  2,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_02\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "110",
+                                                                                        "119",
+                                                                                        "120",
+                                                                                        "报警",
+                                                                                        "火警",
+                                                                                        "急救"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "110",
+                                                                                       "119",
+                                                                                       "报警",
+                                                                                       "火警",
+                                                                                       "急救"
+                                                                                   ],
+                                                                 "missing_terms":  [
+                                                                                       "120"
+                                                                                   ],
+                                                                 "keyword_recall":  0.8333,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "110",
+                                                                                        "119",
+                                                                                        "120",
+                                                                                        "报警",
+                                                                                        "火警",
+                                                                                        "急救"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "110",
+                                                                                                "119",
+                                                                                                "报警",
+                                                                                                "火警",
+                                                                                                "急救"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+                                                                                                "120"
+                                                                                            ],
+                                                                 "critical_entity_recall":  0.8333,
+                                                                 "passes_critical_gate":  false,
+                                                                 "cer":  0.15,
+                                                                 "char_accuracy":  0.85,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "哎哟报警幺幺零火警幺幺九医疗急救幺幺零请记牢",
+                                                 "mandarin_translation":  "哎哟报警幺幺零火警幺幺九医疗急救幺幺零请记牢"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_02\\candidate_02.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "110",
+                                                                                        "119",
+                                                                                        "120",
+                                                                                        "报警",
+                                                                                        "火警",
+                                                                                        "急救"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "110",
+                                                                                       "119",
+                                                                                       "120",
+                                                                                       "报警",
+                                                                                       "火警",
+                                                                                       "急救"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "110",
+                                                                                        "119",
+                                                                                        "120",
+                                                                                        "报警",
+                                                                                        "火警",
+                                                                                        "急救"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "110",
+                                                                                                "119",
+                                                                                                "120",
+                                                                                                "报警",
+                                                                                                "火警",
+                                                                                                "急救"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1,
+                                                                 "char_accuracy":  0.9,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢",
+                                                 "mandarin_translation":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  3,
+                          "text":  "交通事故报警122，请记牢。",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_03\\candidate_01.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "122",
+                                                                                  "报警",
+                                                                                  "交通事故"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "122",
+                                                                                 "报警",
+                                                                                 "交通事故"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "122",
+                                                                                  "报警",
+                                                                                  "交通事故"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "122",
+                                                                                          "报警",
+                                                                                          "交通事故"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1667,
+                                                           "char_accuracy":  0.8333,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "汪雨交通事故报警幺二二请记牢",
+                                           "mandarin_translation":  "汪雨交通事故报警幺二二请记牢"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  1,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_03\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "122",
+                                                                                        "报警",
+                                                                                        "交通事故"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "122",
+                                                                                       "报警",
+                                                                                       "交通事故"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "122",
+                                                                                        "报警",
+                                                                                        "交通事故"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "122",
+                                                                                                "报警",
+                                                                                                "交通事故"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1667,
+                                                                 "char_accuracy":  0.8333,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "汪雨交通事故报警幺二二请记牢",
+                                                 "mandarin_translation":  "汪雨交通事故报警幺二二请记牢"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  4,
+                          "text":  "上海市民服务热线是12345，可以用于咨询，投诉，",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_04\\candidate_01.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "12345",
+                                                                                  "市民服务热线"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "12345",
+                                                                                 "市民服务热线"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "12345",
+                                                                                  "市民服务热线"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "12345",
+                                                                                          "市民服务热线"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.0909,
+                                                           "char_accuracy":  0.9091,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉",
+                                           "mandarin_translation":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  1,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_04\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "12345",
+                                                                                        "市民服务热线"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "12345",
+                                                                                       "市民服务热线"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "12345",
+                                                                                        "市民服务热线"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "12345",
+                                                                                                "市民服务热线"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.0909,
+                                                                 "char_accuracy":  0.9091,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉",
+                                                 "mandarin_translation":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  5,
+                          "text":  "求助和反映非紧急问题。",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_04.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  4,
+                                           "speed":  0.82,
+                                           "seed":  42,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+
+                                                                              ],
+                                                           "matched_terms":  [
+
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+
+                                                                              ],
+                                                           "matched_critical_terms":  [
+
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.2,
+                                                           "char_accuracy":  0.8,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "猫要求助和反映非紧急问题",
+                                           "mandarin_translation":  "猫要求助和反映非紧急问题"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  4,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3,
+                                                                 "char_accuracy":  0.7,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "物有求助和反应非紧急问题",
+                                                 "mandarin_translation":  "物有求助和反应非紧急问题"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_02.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3,
+                                                                 "char_accuracy":  0.7,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "我有求助和反应非紧急问题",
+                                                 "mandarin_translation":  "我有求助和反应非紧急问题"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_03.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  3,
+                                                 "speed":  1.0,
+                                                 "seed":  3407,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3,
+                                                                 "char_accuracy":  0.7,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "高于求助或反映非紧急问题",
+                                                 "mandarin_translation":  "高于求助或反映非紧急问题"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_04.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  4,
+                                                 "speed":  0.82,
+                                                 "seed":  42,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.2,
+                                                                 "char_accuracy":  0.8,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "猫要求助和反映非紧急问题",
+                                                 "mandarin_translation":  "猫要求助和反映非紧急问题"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  6,
+                          "text":  "遇到生命危险先拨紧急电话，",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_06\\candidate_01.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+
+                                                                              ],
+                                                           "matched_terms":  [
+
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+
+                                                                              ],
+                                                           "matched_critical_terms":  [
+
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.25,
+                                                           "char_accuracy":  0.75,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "朋友啊遇到生命危险先拨紧急电话",
+                                           "mandarin_translation":  "朋友啊遇到生命危险先拨紧急电话"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  1,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_06\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.25,
+                                                                 "char_accuracy":  0.75,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "朋友啊遇到生命危险先拨紧急电话",
+                                                 "mandarin_translation":  "朋友啊遇到生命危险先拨紧急电话"
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  7,
+                          "text":  "非紧急问题请拨12345服务热线。",
+                          "selected":  {
+                                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_03.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  3,
+                                           "speed":  1.0,
+                                           "seed":  3407,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "12345"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "12345"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "12345"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "12345"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.125,
+                                                           "char_accuracy":  0.875,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "保有非紧急问题请拨幺二三四五服务热线",
+                                           "mandarin_translation":  "保有非紧急问题请拨幺二三四五服务热线"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  3,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+                                                                                       "12345"
+                                                                                   ],
+                                                                 "keyword_recall":  0.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+                                                                                                "12345"
+                                                                                            ],
+                                                                 "critical_entity_recall":  0.0,
+                                                                 "passes_critical_gate":  false,
+                                                                 "cer":  0.375,
+                                                                 "char_accuracy":  0.625,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "国有非紧急问题请八幺二三四五拿线",
+                                                 "mandarin_translation":  "国有非紧急问题请八幺二三四五拿线"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_02.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_terms":  [
+
+                                                                                   ],
+                                                                 "missing_terms":  [
+                                                                                       "12345"
+                                                                                   ],
+                                                                 "keyword_recall":  0.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+                                                                                                "12345"
+                                                                                            ],
+                                                                 "critical_entity_recall":  0.0,
+                                                                 "passes_critical_gate":  false,
+                                                                 "cer":  0.375,
+                                                                 "char_accuracy":  0.625,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "九幺幺非经济问题请八幺二三四五服务热线",
+                                                 "mandarin_translation":  "九幺幺非经济问题请八幺二三四五服务热线"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_03.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  3,
+                                                 "speed":  1.0,
+                                                 "seed":  3407,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "12345"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "12345"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "12345"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.125,
+                                                                 "char_accuracy":  0.875,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "保有非紧急问题请拨幺二三四五服务热线",
+                                                 "mandarin_translation":  "保有非紧急问题请拨幺二三四五服务热线"
+                                             }
+                                         ]
+                      }
+                  ],
+    "candidates":  [
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_01\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.2,
+                                           "char_accuracy":  0.8,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "WU在上海常用个求助电话号码要记牢",
+                           "mandarin_translation":  "WU在上海常用个求助电话号码要记牢"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_02\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "110",
+                                                                  "119",
+                                                                  "120",
+                                                                  "报警",
+                                                                  "火警",
+                                                                  "急救"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "110",
+                                                                 "119",
+                                                                 "报警",
+                                                                 "火警",
+                                                                 "急救"
+                                                             ],
+                                           "missing_terms":  [
+                                                                 "120"
+                                                             ],
+                                           "keyword_recall":  0.8333,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "110",
+                                                                  "119",
+                                                                  "120",
+                                                                  "报警",
+                                                                  "火警",
+                                                                  "急救"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "110",
+                                                                          "119",
+                                                                          "报警",
+                                                                          "火警",
+                                                                          "急救"
+                                                                      ],
+                                           "missing_critical_terms":  [
+                                                                          "120"
+                                                                      ],
+                                           "critical_entity_recall":  0.8333,
+                                           "passes_critical_gate":  false,
+                                           "cer":  0.15,
+                                           "char_accuracy":  0.85,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "哎哟报警幺幺零火警幺幺九医疗急救幺幺零请记牢",
+                           "mandarin_translation":  "哎哟报警幺幺零火警幺幺九医疗急救幺幺零请记牢"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_02\\candidate_02.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "110",
+                                                                  "119",
+                                                                  "120",
+                                                                  "报警",
+                                                                  "火警",
+                                                                  "急救"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "110",
+                                                                 "119",
+                                                                 "120",
+                                                                 "报警",
+                                                                 "火警",
+                                                                 "急救"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "110",
+                                                                  "119",
+                                                                  "120",
+                                                                  "报警",
+                                                                  "火警",
+                                                                  "急救"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "110",
+                                                                          "119",
+                                                                          "120",
+                                                                          "报警",
+                                                                          "火警",
+                                                                          "急救"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1,
+                                           "char_accuracy":  0.9,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢",
+                           "mandarin_translation":  "我有报警幺幺零火警幺幺九医疗急救幺二零请记牢"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_03\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "122",
+                                                                  "报警",
+                                                                  "交通事故"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "122",
+                                                                 "报警",
+                                                                 "交通事故"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "122",
+                                                                  "报警",
+                                                                  "交通事故"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "122",
+                                                                          "报警",
+                                                                          "交通事故"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1667,
+                                           "char_accuracy":  0.8333,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "汪雨交通事故报警幺二二请记牢",
+                           "mandarin_translation":  "汪雨交通事故报警幺二二请记牢"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_04\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "12345",
+                                                                  "市民服务热线"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "12345",
+                                                                 "市民服务热线"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "12345",
+                                                                  "市民服务热线"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "12345",
+                                                                          "市民服务热线"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.0909,
+                                           "char_accuracy":  0.9091,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉",
+                           "mandarin_translation":  "而为上海市民服务热线是幺两三四五可以用于咨询投诉"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3,
+                                           "char_accuracy":  0.7,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "物有求助和反应非紧急问题",
+                           "mandarin_translation":  "物有求助和反应非紧急问题"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_02.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3,
+                                           "char_accuracy":  0.7,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "我有求助和反应非紧急问题",
+                           "mandarin_translation":  "我有求助和反应非紧急问题"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_03.wav",
+                           "text_lang":  "wu",
+                           "attempt":  3,
+                           "speed":  1.0,
+                           "seed":  3407,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3,
+                                           "char_accuracy":  0.7,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "高于求助或反映非紧急问题",
+                           "mandarin_translation":  "高于求助或反映非紧急问题"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_05\\candidate_04.wav",
+                           "text_lang":  "wu",
+                           "attempt":  4,
+                           "speed":  0.82,
+                           "seed":  42,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.2,
+                                           "char_accuracy":  0.8,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "猫要求助和反映非紧急问题",
+                           "mandarin_translation":  "猫要求助和反映非紧急问题"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_06\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.25,
+                                           "char_accuracy":  0.75,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "朋友啊遇到生命危险先拨紧急电话",
+                           "mandarin_translation":  "朋友啊遇到生命危险先拨紧急电话"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+                                                                 "12345"
+                                                             ],
+                                           "keyword_recall":  0.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+                                                                          "12345"
+                                                                      ],
+                                           "critical_entity_recall":  0.0,
+                                           "passes_critical_gate":  false,
+                                           "cer":  0.375,
+                                           "char_accuracy":  0.625,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "国有非紧急问题请八幺二三四五拿线",
+                           "mandarin_translation":  "国有非紧急问题请八幺二三四五拿线"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_02.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_terms":  [
+
+                                                             ],
+                                           "missing_terms":  [
+                                                                 "12345"
+                                                             ],
+                                           "keyword_recall":  0.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_critical_terms":  [
+
+                                                                      ],
+                                           "missing_critical_terms":  [
+                                                                          "12345"
+                                                                      ],
+                                           "critical_entity_recall":  0.0,
+                                           "passes_critical_gate":  false,
+                                           "cer":  0.375,
+                                           "char_accuracy":  0.625,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "九幺幺非经济问题请八幺二三四五服务热线",
+                           "mandarin_translation":  "九幺幺非经济问题请八幺二三四五服务热线"
+                       },
+                       {
+                           "path":  "outputs\\help_57_64_multiref_candidates_final_v3\\sentence_07\\candidate_03.wav",
+                           "text_lang":  "wu",
+                           "attempt":  3,
+                           "speed":  1.0,
+                           "seed":  3407,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "12345"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "12345"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "12345"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.125,
+                                           "char_accuracy":  0.875,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "保有非紧急问题请拨幺二三四五服务热线",
+                           "mandarin_translation":  "保有非紧急问题请拨幺二三四五服务热线"
+                       }
+                   ]
+}

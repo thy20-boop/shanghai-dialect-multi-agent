@@ -1,0 +1,65 @@
+﻿{
+  "mandarin": "居民身份证丢失后请先到就近的公安派出所审把挂失同时申请补印居民身份证据了解后在上海也可以通过随申办搜索身份证补印有符合条件的本市户籍居民可以马上申请张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+  "dialect_transcript": "居民身份证丢失后请先到就近的公安派出所审把挂失同时申请补印居民身份证据了解后在上海也可以通过随申办搜索身份证补印有符合条件的本市户籍居民可以马上申请张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+  "status": "ok",
+  "status_label": "可直接使用",
+  "warning": null,
+  "suspicion_count": 0,
+  "repair_count": 0,
+  "agent_count": 6,
+  "active_learning_count": 0,
+  "quality_score": 1.0,
+  "consensus_score": null,
+  "action_suggestion": "结果可直接使用，也可作为高质量样本加入展示集。",
+  "text_compacted": false,
+  "draft_mandarin": null,
+  "draft_dialect_transcript": null,
+  "failure_reasons": [],
+  "repairs": [],
+  "suspicions": [],
+  "alternatives": [],
+  "agent_trace": [
+    {
+      "agent": "音频预处理智能体",
+      "role": "输入规范化",
+      "status": "ok",
+      "summary": "接收音频/视频文件，并交给 ASR 后端统一转为 16k 单声道音频特征。"
+    },
+    {
+      "agent": "候选仲裁智能体",
+      "role": "多候选重排",
+      "status": "primary_kept",
+      "summary": "比较 Dolphin 主输出与本地 LoRA 候选，仅在主输出明显高风险时才切换候选。",
+      "candidate_count": 0
+    },
+    {
+      "agent": "纠错记忆智能体",
+      "role": "词典/记忆修复",
+      "status": "ok",
+      "summary": "应用上海话词典、上下文规则和用户长期纠错记忆。",
+      "repair_count": 0
+    },
+    {
+      "agent": "上海话转普通话智能体",
+      "role": "语义转换",
+      "status": "ok",
+      "summary": "把上海话词汇和口语表达转换为普通话文本。"
+    },
+    {
+      "agent": "风险检测智能体",
+      "role": "质量评估",
+      "status": "ok",
+      "summary": "检测重复幻觉、乱码、低置信度、方言残留和需要人工复核的片段。",
+      "suspicion_count": 0
+    },
+    {
+      "agent": "主动学习智能体",
+      "role": "再训练样本挖掘",
+      "status": "no_action",
+      "summary": "收集高风险片段、候选分歧和人工可纠错内容，后续可进入再训练集。",
+      "item_count": 0
+    }
+  ],
+  "active_learning_items": [],
+  "active_learning_saved": 0
+}

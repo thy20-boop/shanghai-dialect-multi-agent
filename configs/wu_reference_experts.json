@@ -1,0 +1,28 @@
+{
+  "experts": [
+    {
+      "id": "official_male_g0003",
+      "use_server_default": true,
+      "prompt_text": "最少辰光阿拉是做撒呃喃，有钞票就是到银行里保本保息。",
+      "gender": "male",
+      "domains": ["general", "hotline", "public_service"],
+      "quality": 1.0
+    },
+    {
+      "id": "female_g1377",
+      "audio": "data/shanghai_audio/shanghai_003720.wav",
+      "prompt_text": "现在呐就是讲现在家庭成员呐，现在是叫宠物呢叫现在叫儿子女儿唻",
+      "gender": "female",
+      "domains": ["general", "public_service"],
+      "quality": 0.72
+    },
+    {
+      "id": "male_g0003_clear",
+      "audio": "data/shanghai_audio/shanghai_000401.wav",
+      "prompt_text": "资金喃基本上侪辣辣上海银行里周转上海银行还有个特点，就是一精灵",
+      "gender": "male",
+      "domains": ["general"],
+      "quality": 0.68
+    }
+  ]
+}

@@ -1,0 +1,1315 @@
+﻿{
+    "output":  "outputs\\help_12_17_reply_wenet_wu_final.mp3",
+    "target":  "wuu",
+    "selected":  {
+                     "path":  "outputs\\help_12_17_reply_wenet_wu_final.mp3",
+                     "text_lang":  "wu",
+                     "transcript":  "交名身份证丢失后请先到就近的公安派出所审查挂失同时申请各零居民身份证在上海也可以通过随申办搜索身份证补临要符合条件个本市户籍居民可以马上申请张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+                     "mandarin_translation":  "交名身份证丢失后请先到就近的公安派出所审查挂失同时申请各零居民身份证在上海也可以通过随申办搜索身份证补临要符合条件个本市户籍居民可以马上申请张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+                     "quality":  {
+                                     "keyword_recall":  1.0,
+                                     "char_accuracy":  0.8182,
+                                     "dialect_score":  0.0,
+                                     "suspicion_count":  0,
+                                     "missing_terms":  [
+
+                                                       ],
+                                     "matched_terms":  [
+                                                           "身份证",
+                                                           "派出所",
+                                                           "户籍"
+                                                       ],
+                                     "missing_critical_terms":  [
+
+                                                                ],
+                                     "passes_critical_gate":  true
+                                 }
+                 },
+    "unsafe_candidate":  false,
+    "critical_gate_failed":  false,
+    "unsafe_policy":  "dual",
+    "used_fallback":  false,
+    "fallback_output":  null,
+    "fallback_text_source":  "primary_text",
+    "min_keyword_recall":  0.9,
+    "min_char_accuracy":  0.75,
+    "sentence_count":  5,
+    "reference_experts":  [
+                              "official_male_g0003",
+                              "female_g1377",
+                              "male_g0003_clear"
+                          ],
+    "generation_endpoints":  [
+                                 "primary"
+                             ],
+    "prefix_trim_enabled":  true,
+    "sentences":  [
+                      {
+                          "index":  1,
+                          "text":  "居民身份证丢失后，请先到就近的公安派出所申报挂失，",
+                          "selected":  {
+                                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_02_trimmed.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  2,
+                                           "speed":  0.88,
+                                           "seed":  2026,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "female_g1377",
+                                           "reference_gender":  "female",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "身份证",
+                                                                                  "派出所"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "身份证",
+                                                                                 "派出所"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "身份证",
+                                                                                  "派出所"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "身份证",
+                                                                                          "派出所"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1739,
+                                                           "char_accuracy":  0.8261,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                                           "mandarin_translation":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                                           "variant":  "prefix_trimmed",
+                                           "trim":  {
+                                                        "prefix_chars":  5,
+                                                        "estimated_seconds":  1.658,
+                                                        "trimmed_seconds":  1.468
+                                                    }
+                                       },
+                          "unsafe":  false,
+                          "attempts":  3,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证",
+                                                                                       "派出所"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证",
+                                                                                                "派出所"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3043,
+                                                                 "char_accuracy":  0.6957,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "为了居民身份证丢失后庆西到旧近个公安派出所申报过失",
+                                                 "mandarin_translation":  "为了居民身份证丢失后庆西到旧近个公安派出所申报过失"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_02.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "female_g1377",
+                                                 "reference_gender":  "female",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证",
+                                                                                       "派出所"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证",
+                                                                                                "派出所"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3043,
+                                                                 "char_accuracy":  0.6957,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "特务有叫命身份证丢失后请先到就近的公安派出所审查挂失",
+                                                 "mandarin_translation":  "特务有叫命身份证丢失后请先到就近的公安派出所审查挂失"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_02_trimmed.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "female_g1377",
+                                                 "reference_gender":  "female",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证",
+                                                                                       "派出所"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证",
+                                                                                                "派出所"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1739,
+                                                                 "char_accuracy":  0.8261,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                                                 "mandarin_translation":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                                                 "variant":  "prefix_trimmed",
+                                                 "trim":  {
+                                                              "prefix_chars":  5,
+                                                              "estimated_seconds":  1.658,
+                                                              "trimmed_seconds":  1.468
+                                                          }
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  2,
+                          "text":  "同时申请补领居民身份证。",
+                          "selected":  {
+                                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_02_trimmed.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  2,
+                                           "speed":  0.88,
+                                           "seed":  2026,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "female_g1377",
+                                           "reference_gender":  "female",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "身份证"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "身份证"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "身份证"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "身份证"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1818,
+                                                           "char_accuracy":  0.8182,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "同时申请各零居民身份证",
+                                           "mandarin_translation":  "同时申请各零居民身份证",
+                                           "variant":  "prefix_trimmed",
+                                           "trim":  {
+                                                        "prefix_chars":  2,
+                                                        "estimated_seconds":  0.662,
+                                                        "trimmed_seconds":  0.702
+                                                    }
+                                       },
+                          "unsafe":  false,
+                          "attempts":  3,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.2727,
+                                                                 "char_accuracy":  0.7273,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "居委会同时申请补领居民身份证",
+                                                 "mandarin_translation":  "居委会同时申请补领居民身份证"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_02.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "female_g1377",
+                                                 "reference_gender":  "female",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.3636,
+                                                                 "char_accuracy":  0.6364,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "怀疑同时申请柏林居民身份证",
+                                                 "mandarin_translation":  "怀疑同时申请柏林居民身份证"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_02_trimmed.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  2,
+                                                 "speed":  0.88,
+                                                 "seed":  2026,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "female_g1377",
+                                                 "reference_gender":  "female",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1818,
+                                                                 "char_accuracy":  0.8182,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "同时申请各零居民身份证",
+                                                 "mandarin_translation":  "同时申请各零居民身份证",
+                                                 "variant":  "prefix_trimmed",
+                                                 "trim":  {
+                                                              "prefix_chars":  2,
+                                                              "estimated_seconds":  0.662,
+                                                              "trimmed_seconds":  0.702
+                                                          }
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  3,
+                          "text":  "在上海，也可以通过随申办搜索身份证补领，",
+                          "selected":  {
+                                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_03\\candidate_01_trimmed.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "身份证"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "身份证"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "身份证"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "身份证"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.0556,
+                                                           "char_accuracy":  0.9444,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "在上海也可以通过随申办搜索身份证补临",
+                                           "mandarin_translation":  "在上海也可以通过随申办搜索身份证补临",
+                                           "variant":  "prefix_trimmed",
+                                           "trim":  {
+                                                        "prefix_chars":  3,
+                                                        "estimated_seconds":  0.891,
+                                                        "trimmed_seconds":  1.101
+                                                    }
+                                       },
+                          "unsafe":  false,
+                          "attempts":  2,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_03\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.2222,
+                                                                 "char_accuracy":  0.7778,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "德惠欧在上海也可以通过随申办搜索身份证补印",
+                                                 "mandarin_translation":  "德惠欧在上海也可以通过随申办搜索身份证补印"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_03\\candidate_01_trimmed.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.0556,
+                                                                 "char_accuracy":  0.9444,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "在上海也可以通过随申办搜索身份证补临",
+                                                 "mandarin_translation":  "在上海也可以通过随申办搜索身份证补临",
+                                                 "variant":  "prefix_trimmed",
+                                                 "trim":  {
+                                                              "prefix_chars":  3,
+                                                              "estimated_seconds":  0.891,
+                                                              "trimmed_seconds":  1.101
+                                                          }
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  4,
+                          "text":  "符合条件的本市户籍居民可以网上申请。",
+                          "selected":  {
+                                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_04\\candidate_01_trimmed.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "户籍"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "户籍"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "户籍"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "户籍"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1765,
+                                                           "char_accuracy":  0.8235,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "要符合条件个本市户籍居民可以马上申请",
+                                           "mandarin_translation":  "要符合条件个本市户籍居民可以马上申请",
+                                           "variant":  "prefix_trimmed",
+                                           "trim":  {
+                                                        "prefix_chars":  3,
+                                                        "estimated_seconds":  0.906,
+                                                        "trimmed_seconds":  0.826
+                                                    }
+                                       },
+                          "unsafe":  false,
+                          "attempts":  2,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_04\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "户籍"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "户籍"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "户籍"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "户籍"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.2941,
+                                                                 "char_accuracy":  0.7059,
+                                                                 "is_usable":  false
+                                                             },
+                                                 "transcript":  "哦哟有符合条件个本市户籍居民可以马上申请",
+                                                 "mandarin_translation":  "哦哟有符合条件个本市户籍居民可以马上申请"
+                                             },
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_04\\candidate_01_trimmed.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "户籍"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "户籍"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "户籍"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "户籍"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1765,
+                                                                 "char_accuracy":  0.8235,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "要符合条件个本市户籍居民可以马上申请",
+                                                 "mandarin_translation":  "要符合条件个本市户籍居民可以马上申请",
+                                                 "variant":  "prefix_trimmed",
+                                                 "trim":  {
+                                                              "prefix_chars":  3,
+                                                              "estimated_seconds":  0.906,
+                                                              "trimmed_seconds":  0.826
+                                                          }
+                                             }
+                                         ]
+                      },
+                      {
+                          "index":  5,
+                          "text":  "如果急需使用证件，可以到派出所申请临时居民身份证。",
+                          "selected":  {
+                                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_05\\candidate_01.wav",
+                                           "text_lang":  "wu",
+                                           "attempt":  1,
+                                           "speed":  0.94,
+                                           "seed":  1986,
+                                           "generator":  "primary",
+                                           "generator_url":  "http://127.0.0.1:9881/tts",
+                                           "reference_expert":  "official_male_g0003",
+                                           "reference_gender":  "male",
+                                           "quality":  {
+                                                           "expected_terms":  [
+                                                                                  "身份证",
+                                                                                  "派出所"
+                                                                              ],
+                                                           "matched_terms":  [
+                                                                                 "身份证",
+                                                                                 "派出所"
+                                                                             ],
+                                                           "missing_terms":  [
+
+                                                                             ],
+                                                           "keyword_recall":  1.0,
+                                                           "dialect_score":  0.0,
+                                                           "suspicion_count":  0,
+                                                           "critical_terms":  [
+                                                                                  "身份证",
+                                                                                  "临时居民身份证",
+                                                                                  "派出所"
+                                                                              ],
+                                                           "matched_critical_terms":  [
+                                                                                          "身份证",
+                                                                                          "临时居民身份证",
+                                                                                          "派出所"
+                                                                                      ],
+                                                           "missing_critical_terms":  [
+
+                                                                                      ],
+                                                           "critical_entity_recall":  1.0,
+                                                           "passes_critical_gate":  true,
+                                                           "cer":  0.1304,
+                                                           "char_accuracy":  0.8696,
+                                                           "is_usable":  true
+                                                       },
+                                           "transcript":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+                                           "mandarin_translation":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证"
+                                       },
+                          "unsafe":  false,
+                          "attempts":  1,
+                          "candidates":  [
+                                             {
+                                                 "path":  "outputs\\help_12_17_multiref_candidates\\sentence_05\\candidate_01.wav",
+                                                 "text_lang":  "wu",
+                                                 "attempt":  1,
+                                                 "speed":  0.94,
+                                                 "seed":  1986,
+                                                 "generator":  "primary",
+                                                 "generator_url":  "http://127.0.0.1:9881/tts",
+                                                 "reference_expert":  "official_male_g0003",
+                                                 "reference_gender":  "male",
+                                                 "quality":  {
+                                                                 "expected_terms":  [
+                                                                                        "身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_terms":  [
+                                                                                       "身份证",
+                                                                                       "派出所"
+                                                                                   ],
+                                                                 "missing_terms":  [
+
+                                                                                   ],
+                                                                 "keyword_recall":  1.0,
+                                                                 "dialect_score":  0.0,
+                                                                 "suspicion_count":  0,
+                                                                 "critical_terms":  [
+                                                                                        "身份证",
+                                                                                        "临时居民身份证",
+                                                                                        "派出所"
+                                                                                    ],
+                                                                 "matched_critical_terms":  [
+                                                                                                "身份证",
+                                                                                                "临时居民身份证",
+                                                                                                "派出所"
+                                                                                            ],
+                                                                 "missing_critical_terms":  [
+
+                                                                                            ],
+                                                                 "critical_entity_recall":  1.0,
+                                                                 "passes_critical_gate":  true,
+                                                                 "cer":  0.1304,
+                                                                 "char_accuracy":  0.8696,
+                                                                 "is_usable":  true
+                                                             },
+                                                 "transcript":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+                                                 "mandarin_translation":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证"
+                                             }
+                                         ]
+                      }
+                  ],
+    "candidates":  [
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证",
+                                                                 "派出所"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证",
+                                                                          "派出所"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3043,
+                                           "char_accuracy":  0.6957,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "为了居民身份证丢失后庆西到旧近个公安派出所申报过失",
+                           "mandarin_translation":  "为了居民身份证丢失后庆西到旧近个公安派出所申报过失"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_02.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "female_g1377",
+                           "reference_gender":  "female",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证",
+                                                                 "派出所"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证",
+                                                                          "派出所"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3043,
+                                           "char_accuracy":  0.6957,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "特务有叫命身份证丢失后请先到就近的公安派出所审查挂失",
+                           "mandarin_translation":  "特务有叫命身份证丢失后请先到就近的公安派出所审查挂失"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_01\\candidate_02_trimmed.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "female_g1377",
+                           "reference_gender":  "female",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证",
+                                                                 "派出所"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证",
+                                                                          "派出所"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1739,
+                                           "char_accuracy":  0.8261,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                           "mandarin_translation":  "交名身份证丢失后请先到就近的公安派出所审查挂失",
+                           "variant":  "prefix_trimmed",
+                           "trim":  {
+                                        "prefix_chars":  5,
+                                        "estimated_seconds":  1.658,
+                                        "trimmed_seconds":  1.468
+                                    }
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.2727,
+                                           "char_accuracy":  0.7273,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "居委会同时申请补领居民身份证",
+                           "mandarin_translation":  "居委会同时申请补领居民身份证"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_02.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "female_g1377",
+                           "reference_gender":  "female",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.3636,
+                                           "char_accuracy":  0.6364,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "怀疑同时申请柏林居民身份证",
+                           "mandarin_translation":  "怀疑同时申请柏林居民身份证"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_02\\candidate_02_trimmed.wav",
+                           "text_lang":  "wu",
+                           "attempt":  2,
+                           "speed":  0.88,
+                           "seed":  2026,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "female_g1377",
+                           "reference_gender":  "female",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1818,
+                                           "char_accuracy":  0.8182,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "同时申请各零居民身份证",
+                           "mandarin_translation":  "同时申请各零居民身份证",
+                           "variant":  "prefix_trimmed",
+                           "trim":  {
+                                        "prefix_chars":  2,
+                                        "estimated_seconds":  0.662,
+                                        "trimmed_seconds":  0.702
+                                    }
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_03\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.2222,
+                                           "char_accuracy":  0.7778,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "德惠欧在上海也可以通过随申办搜索身份证补印",
+                           "mandarin_translation":  "德惠欧在上海也可以通过随申办搜索身份证补印"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_03\\candidate_01_trimmed.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.0556,
+                                           "char_accuracy":  0.9444,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "在上海也可以通过随申办搜索身份证补临",
+                           "mandarin_translation":  "在上海也可以通过随申办搜索身份证补临",
+                           "variant":  "prefix_trimmed",
+                           "trim":  {
+                                        "prefix_chars":  3,
+                                        "estimated_seconds":  0.891,
+                                        "trimmed_seconds":  1.101
+                                    }
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_04\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "户籍"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "户籍"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "户籍"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "户籍"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.2941,
+                                           "char_accuracy":  0.7059,
+                                           "is_usable":  false
+                                       },
+                           "transcript":  "哦哟有符合条件个本市户籍居民可以马上申请",
+                           "mandarin_translation":  "哦哟有符合条件个本市户籍居民可以马上申请"
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_04\\candidate_01_trimmed.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "户籍"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "户籍"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "户籍"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "户籍"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1765,
+                                           "char_accuracy":  0.8235,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "要符合条件个本市户籍居民可以马上申请",
+                           "mandarin_translation":  "要符合条件个本市户籍居民可以马上申请",
+                           "variant":  "prefix_trimmed",
+                           "trim":  {
+                                        "prefix_chars":  3,
+                                        "estimated_seconds":  0.906,
+                                        "trimmed_seconds":  0.826
+                                    }
+                       },
+                       {
+                           "path":  "outputs\\help_12_17_multiref_candidates\\sentence_05\\candidate_01.wav",
+                           "text_lang":  "wu",
+                           "attempt":  1,
+                           "speed":  0.94,
+                           "seed":  1986,
+                           "generator":  "primary",
+                           "generator_url":  "http://127.0.0.1:9881/tts",
+                           "reference_expert":  "official_male_g0003",
+                           "reference_gender":  "male",
+                           "quality":  {
+                                           "expected_terms":  [
+                                                                  "身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_terms":  [
+                                                                 "身份证",
+                                                                 "派出所"
+                                                             ],
+                                           "missing_terms":  [
+
+                                                             ],
+                                           "keyword_recall":  1.0,
+                                           "dialect_score":  0.0,
+                                           "suspicion_count":  0,
+                                           "critical_terms":  [
+                                                                  "身份证",
+                                                                  "临时居民身份证",
+                                                                  "派出所"
+                                                              ],
+                                           "matched_critical_terms":  [
+                                                                          "身份证",
+                                                                          "临时居民身份证",
+                                                                          "派出所"
+                                                                      ],
+                                           "missing_critical_terms":  [
+
+                                                                      ],
+                                           "critical_entity_recall":  1.0,
+                                           "passes_critical_gate":  true,
+                                           "cer":  0.1304,
+                                           "char_accuracy":  0.8696,
+                                           "is_usable":  true
+                                       },
+                           "transcript":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证",
+                           "mandarin_translation":  "张伟业如果急需使用证件可以到派出所申请临时居民身份证"
+                       }
+                   ]
+}

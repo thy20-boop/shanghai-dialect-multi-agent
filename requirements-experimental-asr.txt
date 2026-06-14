@@ -1,0 +1,3 @@
+funasr
+dataoceanai-dolphin
+torchaudio==2.6.0

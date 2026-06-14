@@ -1,0 +1,2 @@
+rapidocr_onnxruntime
+opencv-python-headless

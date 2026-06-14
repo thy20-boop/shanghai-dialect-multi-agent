@@ -1,0 +1,71 @@
+{
+  "version": "2026-06-11",
+  "description": "High-risk Shanghainese/Wu pronunciation prompts for hotline, ID-card and public-service TTS evaluation.",
+  "digits": {
+    "0": "零",
+    "1": "一",
+    "2": "二",
+    "3": "三",
+    "4": "四",
+    "5": "五",
+    "6": "六",
+    "7": "七",
+    "8": "八",
+    "9": "九"
+  },
+  "terms": {
+    "110": {
+      "spoken": "一一零",
+      "meaning": "报警电话",
+      "expected_recall": true
+    },
+    "119": {
+      "spoken": "一一九",
+      "meaning": "火警和消防救援电话",
+      "expected_recall": true
+    },
+    "120": {
+      "spoken": "一二零",
+      "meaning": "医疗急救电话",
+      "expected_recall": true
+    },
+    "122": {
+      "spoken": "一二二",
+      "meaning": "交通事故报警电话",
+      "expected_recall": true
+    },
+    "12345": {
+      "spoken": "一二三四五",
+      "meaning": "上海市民服务热线",
+      "expected_recall": true
+    },
+    "报警": {
+      "spoken": "报警",
+      "expected_recall": true
+    },
+    "火警": {
+      "spoken": "火警",
+      "expected_recall": true
+    },
+    "急救": {
+      "spoken": "急救",
+      "expected_recall": true
+    },
+    "身份证": {
+      "spoken": "身份证",
+      "expected_recall": true
+    },
+    "派出所": {
+      "spoken": "派出所",
+      "expected_recall": true
+    },
+    "随申办": {
+      "spoken": "随申办",
+      "expected_recall": true
+    },
+    "市民服务热线": {
+      "spoken": "市民服务热线",
+      "expected_recall": true
+    }
+  }
+}

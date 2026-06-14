@@ -1,0 +1,49 @@
+# Python and local tools
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local runtime, downloaded third-party code, models and caches
+external/
+portable/
+work/
+logs/
+*.log
+*.pid
+*.zip
+*.7z
+*.tar
+*.tar.gz
+outputs/models/
+outputs/releases/
+
+# Public datasets are restored through scripts; do not duplicate hundreds of MB
+data/shanghai_audio/
+data/raw_videos/
+data/high_risk_wu_tts_recordings/
+
+# Mutable user/review queues
+data/active_learning_queue.jsonl
+data/tts_quality_queue.jsonl
+data/user_corrections.json
+
+# Generated artifacts. Keep only the final submission examples and reports below.
+outputs/*
+!outputs/help_12_17_answer_wu_official_frontend.txt
+!outputs/help_57_64_answer_wu_official_frontend.txt
+!outputs/help_12_17_reply_wenet_wu_final.mp3
+!outputs/help_57_64_reply_wenet_wu_final.mp3
+!outputs/help_12_17_final_generation.json
+!outputs/help_57_64_final_generation.json
+!outputs/help_12_17_full_audio_evaluation.json
+!outputs/help_57_64_full_audio_evaluation.json
