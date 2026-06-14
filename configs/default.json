@@ -1,0 +1,44 @@
+{
+  "project_name": "Shanghai Dialect ASR Repair Agent",
+  "glossary": "data/examples/shanghainese_glossary.json",
+  "mock_manifest": "data/examples/sample_manifest.jsonl",
+  "dataset": {
+    "name": "TingChen-ppmc/Shanghai_Dialect_Conversational_Speech_Corpus",
+    "split": "train",
+    "manifest": "data/shanghai_manifest.jsonl",
+    "audio_dir": "data/shanghai_audio",
+    "max_samples": null
+  },
+  "splits": {
+    "output_dir": "data/splits",
+    "train_count": 3700,
+    "dev_count": 92,
+    "seed": 42
+  },
+  "training": {
+    "base_model": "TingChen-ppmc/whisper-small-Shanghai",
+    "train_manifest": "data/splits/train.jsonl",
+    "eval_manifest": "data/splits/dev.jsonl",
+    "output_dir": "outputs/models/whisper-small-shanghai-lora-full",
+    "learning_rate": 0.0001,
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "eval_steps": 100,
+    "save_steps": 100
+  },
+  "asr": {
+    "backend": "whisper",
+    "model": "outputs/models/whisper-small-shanghai-lora-full",
+    "baseline_model": "TingChen-ppmc/whisper-small-Shanghai",
+    "num_beams": 5,
+    "local_files_only": false
+  },
+  "outputs": {
+    "dir": "outputs/pipeline",
+    "predictions": "outputs/pipeline/predictions.jsonl",
+    "evaluation": "outputs/pipeline/evaluation.json",
+    "dashboard": "outputs/pipeline/dashboard.html",
+    "reports_dir": "outputs/pipeline/reports"
+  }
+}

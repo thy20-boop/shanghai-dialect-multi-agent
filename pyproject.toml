@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shanghai-dialect-agent"
+version = "0.1.0"
+description = "A Shanghainese/Wu dialect ASR repair agent with lightweight fine-tuning hooks."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+asr = [
+  "torch",
+  "transformers>=4.40,<5",
+  "datasets",
+  "accelerate",
+  "peft",
+  "soundfile",
+  "imageio-ffmpeg",
+  "funasr",
+  "dataoceanai-dolphin",
+  "torchaudio==2.6.0",
+]
+finetune = [
+  "torch",
+  "transformers>=4.40,<5",
+  "datasets",
+  "accelerate",
+  "evaluate",
+  "jiwer",
+  "peft",
+  "soundfile",
+]
+ui = [
+  "streamlit",
+  "edge-tts",
+]
+online = [
+  "yt-dlp",
+  "imageio-ffmpeg",
+]
+tts = [
+  "edge-tts",
+]
+experimental-asr = [
+  "funasr",
+  "dataoceanai-dolphin",
+  "torchaudio==2.6.0",
+]
+ocr = [
+  "rapidocr_onnxruntime",
+  "opencv-python-headless",
+]
+dev = [
+  "pytest",
+  "numpy",
+  "soundfile",
+]
+
+[project.scripts]
+shanghai-agent = "ganagent.cli:main"
+gan-agent = "ganagent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
