@@ -42,10 +42,16 @@ from ganagent.tts import (
     select_wu_reference_experts,
     split_gpt_sovits_text,
     split_tts_sentences,
+    WuReferenceExpert,
     wu_voice_notice,
 )
 from ganagent.voice_clone import load_voice_clone_items, speaker_statistics
 from ganagent.webqa import DuckDuckGoHTMLParser, clean_duckduckgo_url
+from ganagent.wu_generation_expert import (
+    SHANGHAI_GUARD_WU_NAME,
+    build_wu_generation_policy,
+    classify_wu_generation_task,
+)
 
 
 class FailingBackend(ASRBackend):
@@ -525,6 +531,88 @@ def test_prefix_trim_is_disabled_for_hotline_answers() -> None:
     assert allows_prefix_trim("居民身份证丢失后去派出所。")
     assert not allows_prefix_trim("报警电话110。")
     assert not allows_prefix_trim("请拨市民服务热线。")
+
+
+def test_shanghai_guard_wu_hotline_policy_keeps_certified_reference_only() -> None:
+    hotline = WuReferenceExpert(
+        expert_id="certified_hotline",
+        audio=None,
+        prompt_text="一一零是报警电话。",
+        domains=("hotline",),
+        quality=1.0,
+        use_server_default=True,
+    )
+    general = WuReferenceExpert(
+        expert_id="daily_chat",
+        audio=None,
+        prompt_text="侬好。",
+        domains=("general",),
+        quality=0.9,
+        use_server_default=True,
+    )
+
+    policy = build_wu_generation_policy(
+        "请拨打110报警电话。",
+        reference_experts=[general, hotline],
+        endpoints=[("primary", "http://127.0.0.1:9880")],
+    )
+
+    assert policy.expert_name == SHANGHAI_GUARD_WU_NAME
+    assert policy.task_type == "hotline"
+    assert not policy.prefix_trim_enabled
+    assert [expert.expert_id for expert in policy.reference_experts] == ["certified_hotline"]
+    assert {profile.reference.expert_id for profile in policy.schedule if profile.reference} == {
+        "certified_hotline"
+    }
+
+
+def test_shanghai_guard_wu_public_service_policy_allows_reference_exploration_and_trim() -> None:
+    service = WuReferenceExpert(
+        expert_id="female_service",
+        audio=None,
+        prompt_text="身份证丢失后去派出所。",
+        domains=("public_service",),
+        quality=1.0,
+        use_server_default=True,
+    )
+    general = WuReferenceExpert(
+        expert_id="male_general",
+        audio=None,
+        prompt_text="侬好。",
+        domains=("general",),
+        quality=0.8,
+        use_server_default=True,
+    )
+
+    policy = build_wu_generation_policy(
+        "身份证丢失后去派出所办理。",
+        reference_experts=[service, general],
+        endpoints=[
+            ("primary", "http://127.0.0.1:9880"),
+            ("secondary", "http://127.0.0.1:9881"),
+        ],
+    )
+
+    assert policy.task_type == "public_service"
+    assert policy.prefix_trim_enabled
+    assert [expert.expert_id for expert in policy.reference_experts] == [
+        "female_service",
+        "male_general",
+    ]
+    assert any(profile.reference is general for profile in policy.schedule)
+    assert any(profile.generator == "secondary" for profile in policy.schedule)
+
+
+def test_generation_schedule_preserves_second_baseline_seed_for_hotlines() -> None:
+    policy = build_wu_generation_policy(
+        "市民服务热线是12345。",
+        reference_experts=[],
+        endpoints=[("primary", "http://127.0.0.1:9880")],
+    )
+
+    assert classify_wu_generation_task("市民服务热线是12345。") == "hotline"
+    assert [profile.seed for profile in policy.schedule[:2]] == [1986, 2026]
+    assert policy.minimum_reference_exploration == 1
 
 
 def test_wu_voice_notice_discloses_mandarin_voice_fallback() -> None:

@@ -8,10 +8,13 @@
 2. 本地 Whisper-LoRA 提供第二候选。
 3. 候选仲裁、纠错记忆和风险检测产生可靠的普通话结果。
 4. 上海话表达模块把回答改写成吴语口语稿。
-5. WenetSpeech-Wu `CosyVoice2-Wu-SFT` 按句生成确定性候选。
-6. Whisper-Medium-Wu 回识候选音频。
-7. 语音质量智能体检查关键词召回、方言信号和可疑片段。
-8. 仲裁智能体输出最终 MP3。
+5. `ShanghaiGuard-Wu` 生成专家控制层决定任务风险、参考音频专家和候选计划。
+6. WenetSpeech-Wu `CosyVoice2-Wu-SFT` 按句生成确定性候选。
+7. Whisper-Medium-Wu 回识候选音频。
+8. 语音质量智能体检查关键词召回、方言信号和可疑片段。
+9. 仲裁智能体输出最终 MP3。
+
+`ShanghaiGuard-Wu` 不是一个重新训练的大 TTS 权重，而是本项目自己的生成控制智能体。它把公开 Wu-SFT 当作声学专家，再叠加风险分类、参考专家路由、固定 seed 候选、自验证、关键实体硬门槛和保守裁剪，让最终 MP3 可解释、可回退、可复现。详细介绍见 `docs/shanghaiguard_wu_generation_expert.md`。
 
 ## 本机部署
 
@@ -34,6 +37,6 @@ powershell -ExecutionPolicy Bypass -File scripts\setup_wenet_wu_sft.ps1
 
 - 身份证回答整段字符准确率为 `85.87%`，关键实体召回为 `100%`。
 - 求助电话回答整段字符准确率为 `76.64%`，五个电话号码全部保留。
-- 66 项自动化测试通过。
+- 69 项自动化测试通过。
 
 模型解决了旧方案使用普通话音素前端朗读上海话文字的问题。后续提升重点应放在上海话回答文本规范化、数字读法和更强的吴语回识模型，而不是继续训练旧 GPT-SoVITS。

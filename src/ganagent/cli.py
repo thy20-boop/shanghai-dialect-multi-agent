@@ -36,7 +36,6 @@ from ganagent.tts import (
     DEFAULT_WU_TTS_BACKEND,
     DEFAULT_WU_TTS_VOICE,
     TTSRequest,
-    allows_prefix_trim,
     join_wav_files,
     leading_hallucination_chars,
     load_wu_reference_experts,
@@ -49,6 +48,10 @@ from ganagent.tts import (
     WuReferenceExpert,
 )
 from ganagent.voice_clone import export_voice_clone_assets
+from ganagent.wu_generation_expert import (
+    SHANGHAI_GUARD_WU_NAME,
+    build_wu_generation_policy,
+)
 
 
 TRAINED_ASR_MODEL = Path("outputs/models/whisper-small-shanghai-lora-full")
@@ -680,9 +683,6 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
     sentence_reports: list[dict] = []
     selected_sentence_paths: list[Path] = []
     all_candidates: list[dict] = []
-    cosy_speeds = [0.94, 0.88, 1.0, 0.82, 0.9]
-    candidate_seeds = [1986, 2026, 3407, 42, 8675309]
-    prefix_trim_enabled = not args.no_prefix_trim and allows_prefix_trim(tts_text)
     reference_experts: list[WuReferenceExpert] = []
     if args.tts_backend == "cosyvoice_wu":
         if args.ref_audio:
@@ -706,34 +706,15 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
     generation_endpoints = [("primary", args.cosyvoice_wu_url)]
     if args.secondary_cosyvoice_wu_url:
         generation_endpoints.append(("secondary", args.secondary_cosyvoice_wu_url))
-    baseline_reference = reference_experts[0] if reference_experts else None
-    baseline_schedule = [
-        (
-            "primary",
-            args.cosyvoice_wu_url,
-            baseline_reference,
-            cosy_speeds[index],
-            candidate_seeds[index],
-        )
-        for index in range(len(candidate_seeds))
-    ]
-    generation_schedule = baseline_schedule[:2]
-    generation_schedule.extend(
-        ("primary", args.cosyvoice_wu_url, reference, cosy_speeds[0], candidate_seeds[0])
-        for reference in reference_experts[1:]
+    wu_generation_policy = build_wu_generation_policy(
+        tts_text,
+        reference_experts=reference_experts,
+        endpoints=generation_endpoints,
+        no_prefix_trim=args.no_prefix_trim or args.tts_backend != "cosyvoice_wu",
     )
-    if args.secondary_cosyvoice_wu_url:
-        generation_schedule.append(
-            (
-                "secondary",
-                args.secondary_cosyvoice_wu_url,
-                baseline_reference,
-                cosy_speeds[0],
-                candidate_seeds[0],
-            )
-        )
-    generation_schedule.extend(baseline_schedule[2:])
-    generation_schedule = generation_schedule[:8]
+    prefix_trim_enabled = wu_generation_policy.prefix_trim_enabled
+    reference_experts = list(wu_generation_policy.reference_experts)
+    generation_schedule = list(wu_generation_policy.schedule)
     for sentence_index, sentence_text in enumerate(sentence_texts, start=1):
         sentence_dir = candidate_dir / f"sentence_{sentence_index:02d}"
         sentence_dir.mkdir(parents=True, exist_ok=True)
@@ -742,9 +723,12 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
         for attempt in range(1, attempts + 1):
             text_lang = "wu" if args.tts_backend == "cosyvoice_wu" else "zh"
             candidate_path = sentence_dir / f"candidate_{attempt:02d}.wav"
-            endpoint_id, endpoint_url, reference_expert, candidate_speed, candidate_seed = (
-                generation_schedule[attempt - 1]
-            )
+            generation_profile = generation_schedule[attempt - 1]
+            endpoint_id = generation_profile.generator
+            endpoint_url = generation_profile.url
+            reference_expert = generation_profile.reference
+            candidate_speed = generation_profile.speed
+            candidate_seed = generation_profile.seed
             synthesize_mp3(
                 TTSRequest(
                     text=sentence_text,
@@ -788,6 +772,8 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
                 "seed": candidate_seed,
                 "generator": endpoint_id,
                 "generator_url": endpoint_url,
+                "wu_generation_expert": SHANGHAI_GUARD_WU_NAME,
+                "wu_generation_task_type": wu_generation_policy.task_type,
                 "reference_expert": (
                     reference_expert.expert_id if reference_expert else "server_default"
                 ),
@@ -848,7 +834,7 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
                     accepted_candidate["quality"]["char_accuracy"] >= 0.85
                     and detected_prefix_chars == 0
                 )
-                explored_reference = attempt >= min(3, attempts)
+                explored_reference = attempt >= wu_generation_policy.minimum_reference_exploration
                 if high_quality or len(reference_experts) <= 1 or explored_reference:
                     break
 
@@ -978,6 +964,8 @@ def handle_speak_verified_command(args: argparse.Namespace) -> int:
         "min_keyword_recall": args.min_keyword_recall,
         "min_char_accuracy": args.min_char_accuracy,
         "sentence_count": len(sentence_reports),
+        "wu_generation_expert": SHANGHAI_GUARD_WU_NAME,
+        "wu_generation_policy": wu_generation_policy.as_dict(),
         "reference_experts": [expert.expert_id for expert in reference_experts],
         "generation_endpoints": [item[0] for item in generation_endpoints],
         "prefix_trim_enabled": prefix_trim_enabled,

@@ -48,7 +48,9 @@ powershell -ExecutionPolicy Bypass -File scripts\setup_wenet_wu_sft.ps1
 powershell -ExecutionPolicy Bypass -File scripts\start_wenet_wu_expert.ps1 -Detached
 ```
 
-完整的吴语回答链路按句生成确定性候选，由 Whisper-Medium-Wu 回听、风险检测和候选仲裁智能体筛选。普通政务句可在男声、女声参考专家之间竞争，并对确认存在的句首赘词做回听后二次裁剪；电话号码等高风险回答只使用认证参考且禁用裁剪。电话、身份证等关键实体必须完整匹配，最终片段之间加入 0.55 秒停顿后再输出 MP3。可通过 `--secondary-cosyvoice-wu-url` 接入 API 兼容的第二生成专家，而不替换当前 Wu-SFT。
+完整的吴语回答链路由本项目自己的 `ShanghaiGuard-Wu` 生成专家控制层管理：它把 CosyVoice2-Wu-SFT 作为公开声学底座，但自己负责任务风险识别、参考音频专家路由、固定 seed/语速候选计划、Whisper-Medium-Wu 回听、关键实体硬门槛、句首赘词裁剪和候选仲裁。普通政务句可在男声、女声参考专家之间竞争；电话号码等高风险回答只使用认证参考且禁用裁剪。电话、身份证等关键实体必须完整匹配，最终片段之间加入 0.55 秒停顿后再输出 MP3。可通过 `--secondary-cosyvoice-wu-url` 接入 API 兼容的第二生成专家，而不替换当前 Wu-SFT。
+
+`ShanghaiGuard-Wu` 的设计说明见 [docs/shanghaiguard_wu_generation_expert.md](docs/shanghaiguard_wu_generation_expert.md)。项目没有把开源模型冒充成自训 TTS 大模型；自己的技术贡献集中在多智能体生成控制、回听验收和风险约束层。
 
 本次 WenetSpeech-Wu 专家对照、部署修复和两段最终评估见 [docs/WENETSPEECH_WU_DEPLOYMENT_REPORT.md](docs/WENETSPEECH_WU_DEPLOYMENT_REPORT.md)。
 
