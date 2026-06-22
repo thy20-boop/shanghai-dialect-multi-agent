@@ -30,7 +30,7 @@
 - 回听自验证：每条候选用识别模型回听，计算关键词召回、字符准确率、方言信号和可疑片段。
 - 关键实体硬门槛：电话、身份证、派出所、户籍等实体必须完整保留。
 - 保守裁剪：只在非高风险任务中裁剪句首赘词，并且裁剪后必须二次回听分数更高才采用。
-- 实时交互：`src/ganagent/live_agent.py` 将原来的文件上传流程包装成按轮语音对话，`src/ganagent/audio_capture.py` 负责麦克风采集和播放，`src/ganagent/dialogue_manager.py` 负责本地社区服务问答与 Codex 搜索任务分流。
+- 实时交互：`src/ganagent/live_agent.py` 将原来的文件上传流程包装成按轮语音对话，`src/ganagent/audio_capture.py` 负责麦克风采集、设备列表、环境噪声校准和播放，`src/ganagent/dialogue_manager.py` 负责本地社区服务问答与 Codex 搜索任务分流。无麦克风时可用 `--text-turn` 进行课堂演示。
 
 详细说明见 `docs/shanghaiguard_wu_generation_expert.md`。
 

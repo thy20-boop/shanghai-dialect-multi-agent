@@ -64,7 +64,13 @@ http://localhost:8501
 .\.venv\Scripts\python.exe -m ganagent.live_agent --reply-target mandarin
 .\.venv\Scripts\python.exe -m ganagent.live_agent --no-playback
 .\.venv\Scripts\python.exe -m ganagent.live_agent --start-threshold 0.018 --silence-seconds 1.1
+.\.venv\Scripts\python.exe -m ganagent.live_agent --list-devices
+.\.venv\Scripts\python.exe -m ganagent.live_agent --input-device 1 --calibrate-noise
+.\.venv\Scripts\python.exe -m ganagent.live_agent --text-turn "身份证丢了怎么办" --reply-target mandarin
+.\.venv\Scripts\python.exe -m ganagent.live_agent --text-turn "今天上海天气怎么样" --no-tts
 ```
+
+其中 `--text-turn` 是无麦克风课堂演示模式，会跳过录音和 ASR，直接用给定文本走对话管理、语音生成和报告保存流程；`--no-tts` 可在没有 TTS 服务时只展示文本回答和报告。每轮都会在 `outputs/live_agent/` 保存 `turn_XXX_report.json`，包含识别结果、回答来源、生成音频、Codex 任务路径和主动学习记录。
 
 如果吴语 TTS 服务未启动，实时版会自动退回普通话语音，避免课堂演示时中断。`START_LIVE_AGENT.bat` 会先尝试启动 WenetSpeech-Wu 专家服务。
 

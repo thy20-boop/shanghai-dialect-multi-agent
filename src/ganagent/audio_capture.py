@@ -12,6 +12,7 @@ import numpy as np
 class RecordingConfig:
     sample_rate: int = 16000
     channels: int = 1
+    device: int | str | None = None
     frame_ms: int = 30
     max_seconds: float = 18.0
     min_speech_seconds: float = 0.45
@@ -66,6 +67,7 @@ def record_utterance(
         channels=cfg.channels,
         dtype="float32",
         blocksize=frame_size,
+        device=cfg.device,
     ) as stream:
         for _ in range(max_frames):
             frame, _ = stream.read(frame_size)
@@ -106,6 +108,62 @@ def record_utterance(
         speech_started=speech_started,
         peak_rms=round(peak_rms, 5),
     )
+
+
+def list_input_devices() -> list[dict]:
+    """Return available microphone-like input devices."""
+
+    try:
+        import sounddevice as sd
+    except ImportError as exc:
+        raise RuntimeError(
+            "列出麦克风需要依赖：python -m pip install sounddevice"
+        ) from exc
+    devices = sd.query_devices()
+    rows: list[dict] = []
+    for index, device in enumerate(devices):
+        if int(device.get("max_input_channels", 0)) <= 0:
+            continue
+        rows.append(
+            {
+                "index": index,
+                "name": str(device.get("name", "")),
+                "hostapi": int(device.get("hostapi", -1)),
+                "max_input_channels": int(device.get("max_input_channels", 0)),
+                "default_samplerate": float(device.get("default_samplerate", 0.0)),
+            }
+        )
+    return rows
+
+
+def calibrate_noise_floor(
+    *,
+    seconds: float = 1.2,
+    sample_rate: int = 16000,
+    device: int | str | None = None,
+) -> dict[str, float]:
+    """Measure ambient RMS and suggest conservative VAD thresholds."""
+
+    try:
+        import sounddevice as sd
+    except ImportError as exc:
+        raise RuntimeError(
+            "麦克风校准需要依赖：python -m pip install sounddevice"
+        ) from exc
+    frames = max(1, int(seconds * sample_rate))
+    audio = sd.rec(frames, samplerate=sample_rate, channels=1, dtype="float32", device=device)
+    sd.wait()
+    values = np.asarray(audio, dtype=np.float32).reshape(-1)
+    rms = float(np.sqrt(np.mean(np.square(values))) if values.size else 0.0)
+    p95 = float(np.percentile(np.abs(values), 95)) if values.size else 0.0
+    start = max(0.010, rms * 3.2, p95 * 1.8)
+    stop = max(0.006, rms * 2.0, p95 * 1.1)
+    return {
+        "noise_rms": round(rms, 6),
+        "noise_p95": round(p95, 6),
+        "start_threshold": round(start, 6),
+        "stop_threshold": round(min(start * 0.85, stop), 6),
+    }
 
 
 def play_audio(path: str | Path) -> bool:

@@ -25,6 +25,8 @@ from ganagent.learning import export_active_learning_manifest
 from ganagent.learning import read_active_learning_queue
 from ganagent.learning import render_active_learning_report
 from ganagent.learning import summarize_active_learning_items
+from ganagent.live_agent import build_simulated_turn
+from ganagent.live_agent import _parse_input_device
 from ganagent.models import AgentResult, DialectSignal, Segment, Suspicion
 from ganagent.product import build_translation_product
 from ganagent.product import TranslationProduct
@@ -665,6 +667,22 @@ def test_live_dialogue_asks_for_retry_on_unreliable_recognition() -> None:
 
     assert reply.source == "risk_fallback"
     assert "再" in reply.text
+
+
+def test_live_agent_simulated_turn_builds_agent_result_and_product() -> None:
+    result, product = build_simulated_turn("身份证丢了怎么办")
+
+    assert result.segments[0].backend == "text_turn"
+    assert result.transcript == "身份证丢了怎么办"
+    assert product.mandarin == "身份证丢了怎么办"
+    assert result.agent_trace[0]["agent"] == "文本模拟输入"
+
+
+def test_live_agent_input_device_parser_accepts_index_or_name() -> None:
+    assert _parse_input_device(None) is None
+    assert _parse_input_device("") is None
+    assert _parse_input_device("2") == 2
+    assert _parse_input_device("Microphone Array") == "Microphone Array"
 
 
 def test_wu_voice_notice_discloses_mandarin_voice_fallback() -> None:
