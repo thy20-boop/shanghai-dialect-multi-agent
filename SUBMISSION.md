@@ -18,6 +18,7 @@
 8. 吴语回听评估智能体检查 CER、关键词和电话号码等关键实体。
 9. 参考音频专家、句首幻觉裁剪与候选仲裁共同选择最终 MP3。
 10. `ShanghaiGuard-Wu` 是本项目自己的吴语生成专家控制层：公开 CosyVoice2-Wu-SFT 负责声学生成，本项目负责风险识别、参考专家路由、候选计划、回听验收、关键实体硬门槛和最终仲裁。
+11. 实时对话 Agent 支持麦克风输入、VAD 自动断句、多智能体识别、本地对话回答、Codex 联网任务生成和语音播放，不再要求用户先上传 MP3。
 
 ## 我们自己的技术含量
 
@@ -29,6 +30,7 @@
 - 回听自验证：每条候选用识别模型回听，计算关键词召回、字符准确率、方言信号和可疑片段。
 - 关键实体硬门槛：电话、身份证、派出所、户籍等实体必须完整保留。
 - 保守裁剪：只在非高风险任务中裁剪句首赘词，并且裁剪后必须二次回听分数更高才采用。
+- 实时交互：`src/ganagent/live_agent.py` 将原来的文件上传流程包装成按轮语音对话，`src/ganagent/audio_capture.py` 负责麦克风采集和播放，`src/ganagent/dialogue_manager.py` 负责本地社区服务问答与 Codex 搜索任务分流。
 
 详细说明见 `docs/shanghaiguard_wu_generation_expert.md`。
 
@@ -45,7 +47,7 @@
 .venv\Scripts\python.exe -m pytest -q
 ```
 
-当前版本共有 69 项自动化测试。
+当前版本共有 72 项自动化测试。
 
 ## 仓库内容
 
@@ -81,6 +83,18 @@ powershell -ExecutionPolicy Bypass -File scripts\setup_wenet_wu_sft.ps1
 ```
 
 浏览器访问 `http://localhost:8501`。
+
+实时对话：
+
+```text
+双击 START_LIVE_AGENT.bat
+```
+
+或运行：
+
+```powershell
+.venv\Scripts\python.exe -m ganagent.live_agent --reply-target wuu
+```
 
 ## 已知限制
 

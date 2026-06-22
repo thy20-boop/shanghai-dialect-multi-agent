@@ -34,6 +34,40 @@ START_UI.bat
 http://localhost:8501
 ```
 
+## 实时对话 Agent
+
+如果不想上传 MP3/视频，可以直接启动按轮实时对话版：
+
+```text
+双击 START_LIVE_AGENT.bat
+```
+
+或者命令行运行：
+
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements-live.txt
+.\.venv\Scripts\python.exe -m ganagent.live_agent --reply-target wuu
+```
+
+启动后直接对着麦克风说上海话或普通话，停顿约 1 秒后系统会自动结束本轮录音，并执行：
+
+```text
+麦克风输入 -> VAD 断句 -> 多智能体识别/纠错/风险检测 -> 对话管理 -> 吴语/普通话语音回复
+```
+
+实时版的本地回答覆盖常见社区服务问题，例如身份证遗失、居住证办理、报警、火警、急救和 12345 热线。涉及天气、新闻、政策、营业时间、地址电话等可能变化的问题时，系统会在 `outputs/live_agent/` 生成 Codex 联网任务文件，由 Codex 当前会话继续搜索和核对来源。
+
+常用参数：
+
+```powershell
+.\.venv\Scripts\python.exe -m ganagent.live_agent --turns 3
+.\.venv\Scripts\python.exe -m ganagent.live_agent --reply-target mandarin
+.\.venv\Scripts\python.exe -m ganagent.live_agent --no-playback
+.\.venv\Scripts\python.exe -m ganagent.live_agent --start-threshold 0.018 --silence-seconds 1.1
+```
+
+如果吴语 TTS 服务未启动，实时版会自动退回普通话语音，避免课堂演示时中断。`START_LIVE_AGENT.bat` 会先尝试启动 WenetSpeech-Wu 专家服务。
+
 支持上传 `WAV / FLAC / OGG / M4A / MP3 / MP4 / AAC`。如果文件后缀和真实音频封装不一致，例如 M4A 被改名成 `.flac`，程序会自动用 ffmpeg 兜底解码。
 
 高级设置里可以勾选“生成语音 MP3”。朗读内容支持：

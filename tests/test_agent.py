@@ -17,6 +17,7 @@ from ganagent.asr_backends import normalize_model_reference
 from ganagent.asr_backends import parse_hotwords
 from ganagent.asr_backends import strip_asr_control_tokens
 from ganagent.codex_task import render_codex_answer_task
+from ganagent.dialogue_manager import build_dialogue_reply
 from ganagent.cli import append_tts_review_item
 from ganagent.dialect import ShanghaiDialectDetector
 from ganagent.learning import append_active_learning_items
@@ -26,6 +27,7 @@ from ganagent.learning import render_active_learning_report
 from ganagent.learning import summarize_active_learning_items
 from ganagent.models import AgentResult, DialectSignal, Segment, Suspicion
 from ganagent.product import build_translation_product
+from ganagent.product import TranslationProduct
 from ganagent.report import render_markdown_report
 from ganagent.repair import RepairEngine, load_custom_repairs_file, parse_custom_repairs
 from ganagent.speech_quality import extract_critical_entities, extract_expected_terms, score_spoken_answer
@@ -59,6 +61,29 @@ class FailingBackend(ASRBackend):
 
     def transcribe(self, audio_path: str | None = None) -> list[Segment]:
         raise RuntimeError("candidate unavailable")
+
+
+def _dialogue_product(text: str, *, status: str = "ok") -> TranslationProduct:
+    return TranslationProduct(
+        mandarin=text,
+        dialect_transcript=text,
+        status=status,
+        status_label="ok" if status == "ok" else "unreliable",
+        warning=None,
+        suspicion_count=0,
+        repair_count=0,
+    )
+
+
+def _dialogue_result(text: str) -> AgentResult:
+    return AgentResult(
+        audio_path=None,
+        dialect=DialectSignal(label="unknown", score=0.0),
+        segments=[Segment(0.0, 1.0, text)],
+        suspicions=[],
+        transcript=text,
+        mandarin_translation=text,
+    )
 
 
 def test_mock_agent_repairs_terms() -> None:
@@ -613,6 +638,33 @@ def test_generation_schedule_preserves_second_baseline_seed_for_hotlines() -> No
     assert classify_wu_generation_task("市民服务热线是12345。") == "hotline"
     assert [profile.seed for profile in policy.schedule[:2]] == [1986, 2026]
     assert policy.minimum_reference_exploration == 1
+
+
+def test_live_dialogue_answers_common_identity_question_locally() -> None:
+    product = _dialogue_product("身份证丢了怎么办")
+    reply = build_dialogue_reply(product, _dialogue_result(product.mandarin))
+
+    assert reply.source == "local_service_rules"
+    assert "派出所" in reply.text
+    assert "一二三四五" in reply.text
+    assert not reply.needs_codex_search
+
+
+def test_live_dialogue_routes_latest_questions_to_codex_task() -> None:
+    product = _dialogue_product("今天上海天气怎么样")
+    reply = build_dialogue_reply(product, _dialogue_result(product.mandarin))
+
+    assert reply.source == "codex_search_task"
+    assert reply.needs_codex_search
+    assert "Codex" in reply.text
+
+
+def test_live_dialogue_asks_for_retry_on_unreliable_recognition() -> None:
+    product = _dialogue_product("听不清", status="unreliable")
+    reply = build_dialogue_reply(product, _dialogue_result(product.mandarin))
+
+    assert reply.source == "risk_fallback"
+    assert "再" in reply.text
 
 
 def test_wu_voice_notice_discloses_mandarin_voice_fallback() -> None:

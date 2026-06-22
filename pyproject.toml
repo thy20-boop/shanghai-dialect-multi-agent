@@ -44,6 +44,12 @@ online = [
 tts = [
   "edge-tts",
 ]
+live = [
+  "sounddevice",
+  "soundfile",
+  "numpy",
+  "imageio-ffmpeg",
+]
 experimental-asr = [
   "funasr",
   "dataoceanai-dolphin",
@@ -62,6 +68,7 @@ dev = [
 [project.scripts]
 shanghai-agent = "ganagent.cli:main"
 gan-agent = "ganagent.cli:main"
+shanghai-live-agent = "ganagent.live_agent:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
