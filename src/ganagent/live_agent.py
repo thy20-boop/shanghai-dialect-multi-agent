@@ -55,7 +55,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--output-dir", default="outputs/live_agent")
     parser.add_argument("--active-learning-log", default="data/active_learning_queue.jsonl")
     parser.add_argument("--no-save-active-learning", action="store_true")
-    parser.add_argument("--codex-task-dir", default="outputs/live_agent")
+    parser.add_argument("--codex-task-dir", default=None, help="Defaults to --output-dir.")
     parser.add_argument("--reply-target", choices=["mandarin", "wuu"], default="wuu")
     parser.add_argument("--tts-backend", choices=["edge", "cosyvoice_wu", "command"], default=None)
     parser.add_argument("--fallback-to-edge", action=argparse.BooleanOptionalAction, default=True)
@@ -85,6 +85,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--no-tts", action="store_true", help="Skip speech synthesis and only print/save the reply.")
     parser.add_argument("--no-playback", action="store_true")
     parser.add_argument("--json-log", default=None)
+    parser.add_argument(
+        "--session-report",
+        default=None,
+        help="Markdown session report path. Defaults to <output-dir>/session_report.md.",
+    )
+    parser.add_argument("--no-session-report", action="store_true")
     return parser
 
 
@@ -127,6 +133,12 @@ def main(argv: list[str] | None = None) -> int:
     print(f"输出目录：{output_dir.resolve()}")
     turn = 0
     total_turns = len(args.text_turn) if args.text_turn and args.turns <= 0 else args.turns
+    session_rows: list[dict] = []
+    session_report_path = (
+        None
+        if args.no_session_report
+        else Path(args.session_report or output_dir / "session_report.md")
+    )
     try:
         while total_turns <= 0 or turn < total_turns:
             turn += 1
@@ -158,7 +170,7 @@ def main(argv: list[str] | None = None) -> int:
             reply = build_dialogue_reply(product, result)
             codex_task_path = None
             if reply.needs_codex_search:
-                codex_task_dir = Path(args.codex_task_dir)
+                codex_task_dir = Path(args.codex_task_dir) if args.codex_task_dir else output_dir
                 codex_task_dir.mkdir(parents=True, exist_ok=True)
                 codex_task_path = codex_task_dir / f"turn_{turn:03d}_codex_task.md"
                 codex_task_path.write_text(
@@ -194,12 +206,17 @@ def main(argv: list[str] | None = None) -> int:
                 "timestamp": time.time(),
             }
             _write_turn_report(output_dir, turn, turn_report)
+            session_rows.append(turn_report)
+            if session_report_path:
+                _write_session_report(session_report_path, session_rows)
             _append_json_log(
                 args.json_log,
                 turn_report,
             )
     except KeyboardInterrupt:
         print("\n已退出实时对话。")
+    if session_report_path and session_rows:
+        print(f"会话报告：{session_report_path}")
     return 0
 
 
@@ -318,6 +335,41 @@ def _recording_payload(recording) -> dict | None:
 def _write_turn_report(output_dir: Path, turn: int, report: dict) -> Path:
     path = output_dir / f"turn_{turn:03d}_report.json"
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+    return path
+
+
+def render_session_report(rows: list[dict]) -> str:
+    lines = [
+        "# 实时对话 Agent 会话报告",
+        "",
+        f"- 总轮数：{len(rows)}",
+        "- 模式：麦克风实时输入或文本模拟输入",
+        "",
+    ]
+    for row in rows:
+        product = row.get("product", {}) or {}
+        reply = row.get("reply", {}) or {}
+        lines.extend(
+            [
+                f"## 第 {row.get('turn')} 轮",
+                "",
+                f"- 用户音频：{row.get('audio') or '文本模拟 / 无音频'}",
+                f"- 识别原文：{product.get('dialect_transcript') or ''}",
+                f"- 普通话理解：{product.get('mandarin') or ''}",
+                f"- 识别状态：{product.get('status_label') or product.get('status') or ''}",
+                f"- 回答来源：{reply.get('source') or ''}",
+                f"- Agent 回复：{reply.get('text') or ''}",
+                f"- 回复音频：{row.get('reply_audio') or '未生成'}",
+                f"- Codex 任务：{row.get('codex_task') or '无'}",
+                "",
+            ]
+        )
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _write_session_report(path: Path, rows: list[dict]) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render_session_report(rows), encoding="utf-8")
     return path
 
 

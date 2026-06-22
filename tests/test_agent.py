@@ -26,6 +26,7 @@ from ganagent.learning import read_active_learning_queue
 from ganagent.learning import render_active_learning_report
 from ganagent.learning import summarize_active_learning_items
 from ganagent.live_agent import build_simulated_turn
+from ganagent.live_agent import render_session_report
 from ganagent.live_agent import _parse_input_device
 from ganagent.models import AgentResult, DialectSignal, Segment, Suspicion
 from ganagent.product import build_translation_product
@@ -683,6 +684,34 @@ def test_live_agent_input_device_parser_accepts_index_or_name() -> None:
     assert _parse_input_device("") is None
     assert _parse_input_device("2") == 2
     assert _parse_input_device("Microphone Array") == "Microphone Array"
+
+
+def test_live_agent_session_report_summarizes_turns() -> None:
+    report = render_session_report(
+        [
+            {
+                "turn": 1,
+                "audio": None,
+                "product": {
+                    "dialect_transcript": "身份证丢了怎么办",
+                    "mandarin": "身份证丢了怎么办",
+                    "status": "ok",
+                    "status_label": "可直接使用",
+                },
+                "reply": {
+                    "source": "local_service_rules",
+                    "text": "请去派出所补办。",
+                },
+                "reply_audio": "outputs/live_agent/turn_001_reply.mp3",
+                "codex_task": None,
+            }
+        ]
+    )
+
+    assert "实时对话 Agent 会话报告" in report
+    assert "身份证丢了怎么办" in report
+    assert "local_service_rules" in report
+    assert "turn_001_reply.mp3" in report
 
 
 def test_wu_voice_notice_discloses_mandarin_voice_fallback() -> None:
