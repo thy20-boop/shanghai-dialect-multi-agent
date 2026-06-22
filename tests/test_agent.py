@@ -26,6 +26,7 @@ from ganagent.learning import read_active_learning_queue
 from ganagent.learning import render_active_learning_report
 from ganagent.learning import summarize_active_learning_items
 from ganagent.live_agent import build_simulated_turn
+from ganagent.live_agent import demo_scenario_turns
 from ganagent.live_agent import render_session_report
 from ganagent.live_agent import _parse_input_device
 from ganagent.models import AgentResult, DialectSignal, Segment, Suspicion
@@ -662,6 +663,16 @@ def test_live_dialogue_routes_latest_questions_to_codex_task() -> None:
     assert "Codex" in reply.text
 
 
+def test_live_dialogue_answers_emergency_phone_question_locally() -> None:
+    product = _dialogue_product("遇到紧急情况可以打什么电话")
+    reply = build_dialogue_reply(product, _dialogue_result(product.mandarin))
+
+    assert reply.source == "local_service_rules"
+    assert "一一零" in reply.text
+    assert "一一九" in reply.text
+    assert "一二零" in reply.text
+
+
 def test_live_dialogue_asks_for_retry_on_unreliable_recognition() -> None:
     product = _dialogue_product("听不清", status="unreliable")
     reply = build_dialogue_reply(product, _dialogue_result(product.mandarin))
@@ -712,6 +723,14 @@ def test_live_agent_session_report_summarizes_turns() -> None:
     assert "身份证丢了怎么办" in report
     assert "local_service_rules" in report
     assert "turn_001_reply.mp3" in report
+
+
+def test_live_agent_course_demo_scenario_covers_local_and_codex_paths() -> None:
+    turns = demo_scenario_turns("course")
+
+    assert any("身份证" in turn for turn in turns)
+    assert any("天气" in turn for turn in turns)
+    assert len(turns) >= 3
 
 
 def test_wu_voice_notice_discloses_mandarin_voice_fallback() -> None:

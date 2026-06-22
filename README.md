@@ -42,6 +42,12 @@ http://localhost:8501
 双击 START_LIVE_AGENT.bat
 ```
 
+如果课堂现场没有麦克风或 TTS 服务，可以直接运行无设备演示：
+
+```text
+双击 START_LIVE_DEMO.bat
+```
+
 或者命令行运行：
 
 ```powershell
@@ -68,6 +74,7 @@ http://localhost:8501
 .\.venv\Scripts\python.exe -m ganagent.live_agent --input-device 1 --calibrate-noise
 .\.venv\Scripts\python.exe -m ganagent.live_agent --text-turn "身份证丢了怎么办" --reply-target mandarin
 .\.venv\Scripts\python.exe -m ganagent.live_agent --text-turn "今天上海天气怎么样" --no-tts
+.\.venv\Scripts\python.exe -m ganagent.live_agent --demo-scenario course
 ```
 
 其中 `--text-turn` 是无麦克风课堂演示模式，会跳过录音和 ASR，直接用给定文本走对话管理、语音生成和报告保存流程；`--no-tts` 可在没有 TTS 服务时只展示文本回答和报告。每轮都会在 `outputs/live_agent/` 保存 `turn_XXX_report.json`，并持续更新 `session_report.md`，包含识别结果、回答来源、生成音频、Codex 任务路径和主动学习记录，适合直接放进课堂展示。

@@ -36,6 +36,24 @@ from ganagent.repair import RepairEngine, load_custom_repairs_file, parse_custom
 from ganagent.tts import TTSRequest, resolve_tts_text, synthesize_mp3
 
 
+DEMO_SCENARIOS = {
+    "course": [
+        "身份证丢了怎么办",
+        "遇到紧急情况可以打什么电话",
+        "今天上海天气怎么样",
+    ],
+    "service": [
+        "身份证丢了怎么办",
+        "居住证怎么办理",
+        "我要投诉可以打什么电话",
+    ],
+    "search": [
+        "今天上海天气怎么样",
+        "现在附近医院几点营业",
+    ],
+}
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Realtime turn-based Shanghai dialect dialogue agent."
@@ -77,6 +95,12 @@ def build_parser() -> argparse.ArgumentParser:
         default=[],
         help="Simulate one dialogue turn from text. Can be repeated for mic-free demos.",
     )
+    parser.add_argument(
+        "--demo-scenario",
+        choices=sorted(DEMO_SCENARIOS),
+        default=None,
+        help="Run a built-in mic-free demo scenario.",
+    )
     parser.add_argument("--sample-rate", type=int, default=16000)
     parser.add_argument("--max-record-seconds", type=float, default=18.0)
     parser.add_argument("--silence-seconds", type=float, default=0.85)
@@ -96,6 +120,11 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    if args.demo_scenario:
+        args.text_turn = DEMO_SCENARIOS[args.demo_scenario] + list(args.text_turn)
+        if not args.output_dir or args.output_dir == "outputs/live_agent":
+            args.output_dir = f"outputs/live_agent_demo_{args.demo_scenario}"
+        args.no_tts = True
     if args.list_devices:
         _print_input_devices()
         return 0
@@ -266,6 +295,10 @@ def build_simulated_turn(text: str) -> tuple[AgentResult, TranslationProduct]:
         ],
     )
     return result, build_translation_product(result)
+
+
+def demo_scenario_turns(name: str) -> list[str]:
+    return list(DEMO_SCENARIOS[name])
 
 
 def _speak_reply(args: argparse.Namespace, text: str, output_dir: Path, turn: int) -> Path | None:

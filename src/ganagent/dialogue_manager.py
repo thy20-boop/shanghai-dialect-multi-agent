@@ -70,6 +70,15 @@ def _answer_common_service_question(question: str) -> str | None:
         return "遇到突发疾病或严重受伤，请立即拨打一二零急救电话。"
     if re.search(r"12345|热线|投诉|咨询", question):
         return "一般政务咨询、投诉或求助，可以拨打一二三四五市民服务热线。"
+    if any(term in question for term in ("紧急", "应急", "求助", "危险")) and any(
+        term in question for term in ("电话", "号码", "打什么", "拨打")
+    ):
+        return (
+            "如果有人身危险或治安问题，拨打一一零；"
+            "如果着火或有消防危险，拨打一一九；"
+            "如果有人突发疾病或严重受伤，拨打一二零；"
+            "一般政务咨询和非紧急求助，可以拨打一二三四五。"
+        )
     if any(term in question for term in ("你好", "侬好", "喂", "在吗")):
         return "侬好，我在。你可以直接用上海话问我办事、求助或生活问题。"
     return None

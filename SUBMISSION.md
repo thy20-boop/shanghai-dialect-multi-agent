@@ -47,7 +47,7 @@
 .venv\Scripts\python.exe -m pytest -q
 ```
 
-当前版本共有 72 项自动化测试。
+当前版本共有 77 项自动化测试。
 
 ## 仓库内容
 
@@ -90,10 +90,17 @@ powershell -ExecutionPolicy Bypass -File scripts\setup_wenet_wu_sft.ps1
 双击 START_LIVE_AGENT.bat
 ```
 
+无设备课程演示：
+
+```text
+双击 START_LIVE_DEMO.bat
+```
+
 或运行：
 
 ```powershell
 .venv\Scripts\python.exe -m ganagent.live_agent --reply-target wuu
+.venv\Scripts\python.exe -m ganagent.live_agent --demo-scenario course
 ```
 
 ## 已知限制
