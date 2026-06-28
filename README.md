@@ -34,6 +34,62 @@ START_UI.bat
 http://localhost:8501
 ```
 
+## 老师验收建议
+
+课堂检查时，建议优先使用网页上传音频/MP3，而不是依赖实时麦克风。实时麦克风受电脑声卡、权限、环境噪声和会议软件占用影响比较大；如果现场麦克风调用不稳定，直接使用 `START_UI.bat` 打开网页上传音频文件即可，核心识别、纠错、风险检测、问答分流和语音生成链路不变。
+
+老师可以按下面 5 个例子快速检查：
+
+1. 直接查看随仓库提交的最终产物：
+
+```text
+outputs/help_12_17_reply_wenet_wu_final.mp3
+outputs/help_57_64_reply_wenet_wu_final.mp3
+outputs/help_12_17_full_audio_evaluation.json
+outputs/help_57_64_full_audio_evaluation.json
+```
+
+预期结果：两个 MP3 是已经生成好的吴语回复样例；两个 JSON 是机器回听评估报告，能看到字符准确率、关键实体召回和风险状态。这个检查不需要下载大模型。
+
+2. 无设备完整演示：
+
+```text
+双击 START_LIVE_DEMO.bat
+```
+
+预期结果：自动跑三轮文本模拟对话，生成 `outputs/live_agent_demo_course/session_report.md`，其中前两轮是本地服务回答，第三轮会生成 Codex 联网任务。
+
+3. 网页上传音频/MP3：
+
+```text
+双击 START_UI.bat
+浏览器打开 http://localhost:8501
+上传 WAV / MP3 / FLAC / M4A / MP4 等音频或视频
+```
+
+预期结果：网页显示普通话结果、识别原文、修复记录、可疑片段；高级设置里可以勾选生成普通话或吴语语音回复。
+
+4. 命令行上传音频文件：
+
+```powershell
+.\.venv\Scripts\python.exe -m ganagent.cli translate `
+  --audio path\to\teacher_sample.mp3 `
+  --json
+```
+
+预期结果：终端输出 JSON，包含 `mandarin`、`dialect_transcript`、`repairs`、`suspicions`、`agent_trace` 等字段。老师可以换成自己的 MP3/WAV 文件。
+
+5. 生成 Codex 联网任务：
+
+```powershell
+.\.venv\Scripts\python.exe -m ganagent.live_agent `
+  --text-turn "今天上海天气怎么样" `
+  --no-tts `
+  --output-dir outputs\teacher_check
+```
+
+预期结果：生成 `outputs/teacher_check/session_report.md` 和 `outputs/teacher_check/turn_001_codex_task.md`。这说明系统会把需要最新信息的问题交给 Codex 当前会话继续搜索，而不是假装离线模型知道实时答案。
+
 ## 实时对话 Agent
 
 如果不想上传 MP3/视频，可以直接启动按轮实时对话版：
