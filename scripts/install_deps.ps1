@@ -1,5 +1,5 @@
 param(
-  [ValidateSet("data", "asr", "finetune", "ui", "online", "ocr", "tts")]
+  [ValidateSet("data", "asr", "finetune", "ui", "online", "ocr", "tts", "live")]
   [string]$Group = "data",
   [ValidateSet("auto", "cuda", "cpu")]
   [string]$TorchBackend = "auto"
